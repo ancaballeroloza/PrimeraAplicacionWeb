@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="normalize.css">
+  <script src="modernizr-custom.js"></script>
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/material-icons.css">
+  <link rel="stylesheet" href="css/prueba3.css">
+  <script src="dist/Chart.bundle.min.js"></script>
+
+  
+    
+  
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/javascript.js"></script>
+
+<link href='fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+<link href='fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='fullcalendar/lib/moment.min.js'></script>
+
+<script src='fullcalendar/fullcalendar.min.js'></script>
+
+<script src="js/jquery.sparkline.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function() {
+
+      var myvalues = [10,8,5,7,4,4,5,3,7,8,9,3,6,7,8];
+
+        $('.inlinebar').sparkline(myvalues, {type: 'bar', barColor: 'red' , barWidth: '20', height:'80px'} );
+    
+
+        $('.inlinesparkline').sparkline(myvalues, {type: 'line', width: '78%', height:'80px', fillColor: '#ffb300'} ); 
+
+        
+        
+        $('#bullet').sparkline(myvalues, { type:'bullet', width: '78%', height:'80px' });
+
+        
+    });
+    </script>
+
+
+
+
+
+ 
+<script>
+
+  $(document).ready(function() {
+    
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      defaultDate: '2017-05-12',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2017-05-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2017-05-07',
+          end: '2017-05-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2017-05-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2017-05-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2017-05-11',
+          end: '2017-05-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2017-05-12T10:30:00',
+          end: '2017-05-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2017-05-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2017-05-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2017-05-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2017-05-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2017-05-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2017-05-28'
+        }
+      ]
+    });
+    
+  });
+
+</script>
+
+
+
+
+</head>
+
+
+<style>
+  
+
+
+
+
+</style>
+
+
+<body>
+
+      <div class="navbar-fixed">
+        
+      
+          <nav class="nav-extended caballero-navegador">
+          <div class="nav-wrapper blue-grey darken-4">
+            <a href="#!" class="brand-logo left"><i class="large material-icons">account_circle</i>CABALLERO</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li>
+                  <input placeholder="Buscar" id="first_name" type="text" class="validate">
+              </li>
+                      
+                    
+              <li><a href="#"><i class="material-icons">search</i></a></li>
+              <li><a href="#"><i class="material-icons">notifications</i></a></li>
+              <li><a href="#"><i class="material-icons">message</i></a></li>
+              <li><a href="#"><i class="material-icons">settings</i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              
+              <li><a href="#">notificaciones</a></li>
+              <li><a href="#">mensajes</a></li>
+              <li><a href="#">herramientas</a></li>
+              
+              <li>
+                  <input placeholder="Buscar" id="first_name" type="text" class="validate"><i class="material-icons">search</i>
+              </li>
+            </ul>
+          </div>
+
+
+    
+          <div class="nav-content grey darken-3 caballero-navegador">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#principal">Principal</a></li>
+              <li class="tab"><a href="#clientes">Clientes</a></li>
+              <li class="tab"><a href="#compras">Compras</a></li>
+              <li class="tab"><a href="#ventas">Ventas</a></li>
+              <li class="tab"><a href="#inventario">Inventario</a></li>
+              <li class="tab"><a href="#reportes">Reportes</a></li>
+              <li class="tab"><a href="#servicios">Servicios</a></li>
+              <li class="tab"><a href="#configuraciones">Configuraciones</a></li>
+            </ul>
+          </div>
+
+        </nav>
+
+        
+       
+
+      </div>
+
+
+      <section id="clientes" class="clientes">
+            
+            <div class="row">
+               <h2 class="col s12 m12 l12">Registro de Clientes</h2>
+            </div>
+           
+
+            <div class="row">
+              <form class="col s12 m9 l9">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                    <label for="disabled">Disabled</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    This is an inline input field:
+                    <div class="input-field inline">
+                      <input id="email" type="email" class="validate">
+                      <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="col s12 m3 l3">
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Guardar</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Editar</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Eliminar</a>
+                <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Cancelar</a>
+                
+              </div>
+            </div>
+
+
+        
+      </section>
+
+       <section id="compras" class="compras">
+        
+      </section>
+
+       <section id="ventas" class="ventas">
+        
+      </section>
+
+       <section id="inventario" class="inventario">
+        
+      </section>
+
+       <section id="reportes" class="reportes">
+        
+      </section>
+
+       <section id="servicios" class="servicios">
+        
+      </section>
+
+       <section id="configuraciones" class="configuraciones">
+        
+      </section>
+
+
+
+
+
+      <section id="principal" class="principal">
+
+
+
+    
+          
+
+          <div class="row">
+            
+
+               <div class="col s12 m12 l4 sparklines-graficos">
+                  <p></p>
+                  <span>Ventas</span>
+                  <span class="right">+%90</span>
+                  <p>$ 22,650 / semana</p>
+                  <p class="inlinebar"></p>
+                
+              </div>
+
+
+
+              <div class="col s12 m12 l4 sparklines-graficos">
+                    <p></p>
+                    <span>Vistas</span>
+                    <span class="right">+%60</span>
+                    <p>6,520 / día</p>
+                    <p class="inlinesparkline"></p>.
+                
+              </div>
+
+
+              <div class="col s12 m12 l4 sparklines-graficos">
+                    <p></p>
+                    <span>Usuarios</span>
+                    <span class="right">+%45</span>
+                    <p>5,200 / día</p>
+                    <p id="bullet"></p>
+                
+              </div>
+
+
+
+        </div>
+
+
+        
+        <div class="row">
+          
+
+          <div class="caballero-informativo col s12 m6 l3">
+            <div class="caballero-div-informativo1 valign-wrapper"><span><i class="medium material-icons">work</i></span></div>
+
+            <div class="caballero-div-informativo2">
+              <p class="center-align">Tareas</p>
+              <p class="center-align">50</p>
+            </div>
+
+          </div>
+
+
+         <div class="caballero-informativo col s12 m6 l3">
+            <div class="caballero-div-informativo1 valign-wrapper"><span><i class="medium material-icons">shopping_basket</i></span></div>
+
+            <div class="caballero-div-informativo2">
+              <p class="center-align">Compras</p>
+              <p class="center-align">1200</p>
+            </div>
+         </div>
+
+         <div class="caballero-informativo col s12 m6 l3">
+            <div class="caballero-div-informativo1 valign-wrapper"><span><i class="medium material-icons">question_answer</i></span></div>
+
+            <div class="caballero-div-informativo2">
+              <p class="center-align">Cuestiones</p>
+              <p class="center-align">22</p>
+            </div>
+         </div>
+
+         <div class="caballero-informativo col s12 m6 l3">
+            <div class="caballero-div-informativo1 valign-wrapper"><span><i class="medium material-icons">email</i></span></div>
+
+            <div class="caballero-div-informativo2">
+              <p class="center-align">Mensajes</p>
+              <p class="center-align">10</p>
+            </div>
+         </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="row">
+          
+
+          <div class="caballero-section-componentes col s12 m12 l4">
+              <div class="caballero-div-componentes1 left-align valign-wrapper"><span>Tareas</span></div>
+
+              <div class="caballero-div-componentes2">
+
+                 <ul>
+                  <li>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">Informes de</label><i class="material-icons right">info_outline</i>
+                    </p>
+                  </li>
+
+                    <li class="divider"></li>
+
+                  <li>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">Pagar Facturas</label><i class="material-icons right">info_outline</i>
+                    </p>
+                  </li>
+
+                    <li class="divider"></li>
+
+                  <li>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">La cena con Tonny</label><i class="material-icons right">info_outline</i>
+                    </p>
+                  </li>
+
+                    <li class="divider"></li>
+
+                  <li>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">Nuevo Tema</label><i class="material-icons right">info_outline</i>
+                    </p>
+                  </li>
+
+                    <li class="divider"></li>
+
+                  <li>
+                    <p>
+                      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                      <label for="filled-in-box">Billete de</label><i class="material-icons right">info_outline</i>
+                    </p>
+                  </li>
+                </ul>
+
+                
+             </div>
+
+          </div>
+
+
+
+
+          <div class="caballero-section-componentes col s12 m12 l4">
+            <div class="caballero-div-componentes1 left-align valign-wrapper"><span>Contáctenos</span></div>
+
+            <div class="caballero-div-componentes2 row">
+
+             
+               <form class="col s12">
+
+              
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+               
+                 
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                  
+             
+
+
+                    <div class="row">
+                      
+                      <button class="btn waves-effect waves-light col s12" type="submit" name="action">Submit
+                       <i class="material-icons right">send</i>
+                      </button>
+
+                    </div>
+
+                </form>
+
+              
+            </div>
+
+           </div>
+
+
+
+            <div class="caballero-section-componentes col s12 m12 l4">
+                  <div class="caballero-div-componentes1 left-align valign-wrapper"><span>Contactos</span></div>
+
+                  <div class="caballero-div-componentes2">
+
+                    <ul>
+
+                    <ul>
+
+                       <li> <div class="caballero-section-imagen btn-large">
+                          <img src="images.jpg" alt="" data-activates="#" class="circle responsive-img caballero-imagen-circular left">
+                          <span class="right">Joshua Willians</span>
+                          </div>
+                       </li>
+
+                       <li class="divider"></li>
+
+                       <li> <div class="caballero-section-imagen btn-large">
+                        <img src="images.jpg" alt="" data-activates="#" class="circle responsive-img caballero-imagen-circular left">
+                        <span class="right">Joshua Willians</span>
+                        </div>
+                       </li>
+
+                       <li class="divider"></li>
+
+                       <li> <div class="caballero-section-imagen btn-large">
+                         <img src="images.jpg" alt="" data-activates="#" class="circle responsive-img caballero-imagen-circular left">
+                         <span class="right">Joshua Willians</span>
+                         </div>
+                       </li>
+
+                       <li class="divider"></li>
+                                        
+                       <li> <div class="caballero-section-imagen btn-large">
+                          <img src="images.jpg" alt="" data-activates="#" class="circle responsive-img caballero-imagen-circular left">
+                          <span class="right">Joshua Willians</span>
+                          </div>
+                       </li>
+                      </ul>
+
+
+                    </ul>
+
+                    
+                 </div>
+
+              </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="row">
+          
+
+
+          <div class="caballero-section-ventas col s12 m12 l8">
+              <div class="caballero-div-ventas1 center-align"><span>Ventas Recientes</span></div>
+
+                <div class="caballero-div-ventas2">
+
+               
+                     <table class="striped caballero-tabla-ventas">
+                    <thead>
+                      <tr>
+                          <th>Carné de Identidad</th>
+                          <th>Año</th>
+                          <th>Marca</th>
+                          <th>Color</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                        <td>$0.87</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                
+                </div>
+
+            </div>
+
+
+
+            <div class="caballero-section-refrescar col s12 m12 l4">
+              <div class="caballero-div-refrescar1 left-align valign-wrapper"><span>Refrescar</span></div>
+
+                <div class="caballero-div-refrescar2">
+
+               
+
+                
+                </div>
+
+            </div>
+
+
+
+
+
+              <div class="caballero-section-graficos col s12 m12 l8">
+              <div class="caballero-div-graficos1 center-align"><span>Gráfico de Ventas</span></div>
+
+                <div class="caballero-div-graficos2">
+
+                   <canvas id="chart-section" width="800" height="400">
+                     
+
+                   </canvas>
+
+                
+                </div>
+
+            </div>
+
+
+
+              <div class="caballero-section-actividad col s12 m12 l4">
+              <div class="caballero-div-actividad1 center-align"><span>Actividad</span></div>
+
+                <div class="caballero-div-actividad2">
+
+               
+
+                
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+          
+
+            
+
+        </div>
+
+
+
+        <div class="row">
+          
+
+        
+          <div class="caballero-section-calendario col s12 m12 l12">
+            <div class="caballero-div-calendario1 center-align"><span>Calendario</span></div>
+
+              <div class="caballero-div-calendario2">
+
+                <div id='calendar'></div>
+
+              
+              </div>
+
+          </div>
+
+
+
+        </div>
+        
+     
+
+
+        
+      </section>
+
+      
+
+
+
+        <footer class="page-footer grey darken-3">
+          <div class="container grey darken-1">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright  indigo accent-4">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+
+
+<script>
+  
+$( document ).ready(function(){
+
+  $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
+
+ 
+});
+
+</script>
+
+ 
+  
+</body>
+</html>
+    
+
+
+      
+  
+
+
+     
+
+     
+
+
+
+
+<script>
+
+$( document ).ready(function(){
+
+  $(".button-collapse").sideNav();
+});
+
+  
+
+
+</script>
+
+ 
+  
+</body>
+</html>
